@@ -1,234 +1,20 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Daftar Pemenang</title>
-
-<style>
-*{
-    box-sizing:border-box;
-}
-
-body{
-    margin:0;
-    padding:10px;
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:flex-start;
-    background:#020617;
-    font-family:Arial, sans-serif;
-}
-
-.poster{
-    width:100%;
-    max-width:360px;
-    height:720px;
-    padding:12px;
-    overflow:hidden;
-    border-radius:28px;
-    color:#fff;
-    background:
-        radial-gradient(circle at top left,rgba(56,189,248,.55),transparent 34%),
-        radial-gradient(circle at top right,rgba(37,99,235,.65),transparent 35%),
-        radial-gradient(circle at bottom,rgba(14,165,233,.22),transparent 45%),
-        linear-gradient(160deg,#061326,#08245c 45%,#020617);
-    box-shadow:0 25px 55px rgba(0,0,0,.45);
-    border:1px solid rgba(255,255,255,.18);
-}
-
-.top-card{
-    text-align:center;
-    padding:11px 10px;
-    border-radius:22px;
-    background:rgba(255,255,255,.12);
-    border:1px solid rgba(255,255,255,.18);
-    box-shadow:inset 0 1px 0 rgba(255,255,255,.25);
-}
-
-.logo{
-    width:48px;
-    height:48px;
-    padding:8px;
-    border-radius:16px;
-    background:#fff;
-    object-fit:contain;
-    box-shadow:0 10px 20px rgba(0,0,0,.25);
-}
-
-.badge{
-    width:max-content;
-    margin:7px auto 5px;
-    padding:4px 10px;
-    border-radius:999px;
-    background:linear-gradient(135deg,#facc15,#f97316);
-    color:#111827;
-    font-size:8px;
-    font-weight:900;
-    letter-spacing:.7px;
-}
-
-h1{
-    margin:0;
-    font-size:17px;
-    line-height:1.15;
-    font-weight:900;
-}
-
-.subtitle{
-    margin:5px 0 0;
-    font-size:10px;
-    color:#dbeafe;
-}
-
-.claim{
-    margin-top:8px;
-    padding:8px 10px;
-    border-radius:16px;
-    text-align:center;
-    font-size:10px;
-    line-height:1.35;
-    font-weight:700;
-    color:#eff6ff;
-    background:rgba(255,255,255,.10);
-    border:1px solid rgba(255,255,255,.16);
-}
-
-.partner{
-    margin-top:8px;
-    padding:8px;
-    border-radius:18px;
-    background:rgba(255,255,255,.96);
-    text-align:center;
-}
-
-.partner-title{
-    color:#0f172a;
-    font-size:8px;
-    font-weight:900;
-    letter-spacing:1px;
-    margin-bottom:6px;
-}
-
-.partner-row{
-    display:flex;
-    justify-content:center;
-    gap:7px;
-}
-
-.partner-row img{
-    width:31px;
-    height:31px;
-    padding:5px;
-    border-radius:10px;
-    object-fit:contain;
-    background:#f8fafc;
-    border:1px solid #e5e7eb;
-}
-
-.list{
-    margin-top:8px;
-    padding:8px;
-    border-radius:22px;
-    background:rgba(255,255,255,.98);
-    box-shadow:0 18px 35px rgba(0,0,0,.35);
-}
-
-.winner{
-    display:flex;
-    align-items:center;
-    gap:7px;
-    padding:5px 6px;
-    margin-bottom:4px;
-    border-radius:11px;
-    background:linear-gradient(135deg,#f8fbff,#edf4ff);
-    border:1px solid #dbeafe;
-}
-
-.winner:last-child{
-    margin-bottom:0;
-}
-
-.no{
-    width:22px;
-    height:22px;
-    flex:0 0 22px;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:linear-gradient(135deg,#2563eb,#06b6d4);
-    color:white;
-    font-size:10px;
-    font-weight:900;
-}
-
-.info{
-    flex:1;
-    min-width:0;
-}
-
-.info b{
-    display:block;
-    color:#0f172a;
-    font-size:10px;
-    font-weight:900;
-}
-
-.info span{
-    display:block;
-    margin-top:1px;
-    color:#64748b;
-    font-size:8px;
-}
-
-.prize{
-    font-size:9px;
-    font-weight:900;
-    color:#2563eb;
-    white-space:nowrap;
-}
-
-.website{
-    margin-top:8px;
-    padding:7px;
-    border-radius:15px;
-    text-align:center;
-    font-size:9px;
-    font-weight:800;
-    color:#e0f2fe;
-    background:rgba(255,255,255,.10);
-    border:1px solid rgba(255,255,255,.15);
-}
-
-.website b{
-    color:#67e8f9;
-}
-
-.footer{
-    margin-top:6px;
-    text-align:center;
-    font-size:8px;
-    color:#cbd5e1;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Pemenang</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <div class="poster">
 
-    <div class="top-card">
+    <div class="header">
         <img src="logo.png" class="logo">
-
         <div class="badge">PENGUMUMAN RESMI</div>
-
         <h1>DAFTAR PEMENANG HADIAH</h1>
-
-        <div class="subtitle">
-            Program Berbagi Hadiah Periode Juli 2026
-        </div>
+        <p>Program Berbagi Hadiah Periode Juli 2026</p>
     </div>
 
     <div class="claim">
@@ -237,36 +23,30 @@ h1{
     </div>
 
     <div class="partner">
-        <div class="partner-title">OFFICIAL PARTNER</div>
-
-        <div class="partner-row">
-            <img src="partner1.png">
-            <img src="partner2.png">
-            <img src="partner3.png">
-        </div>
+        <span>OFFICIAL PARTNER</span>
+        <img src="partner.png">
     </div>
 
     <div class="list">
-
-        <div class="winner"><div class="no">1</div><div class="info"><b>ANDI S******</b><span>0812******21</span></div><div class="prize">Rp2.000.000</div></div>
-        <div class="winner"><div class="no">2</div><div class="info"><b>SITI A******</b><span>0853******90</span></div><div class="prize">Rp2.000.000</div></div>
-        <div class="winner"><div class="no">3</div><div class="info"><b>BUDI S******</b><span>0821******44</span></div><div class="prize">Rp2.000.000</div></div>
-        <div class="winner"><div class="no">4</div><div class="info"><b>RINA P******</b><span>0878******12</span></div><div class="prize">Rp2.000.000</div></div>
-        <div class="winner"><div class="no">5</div><div class="info"><b>DEWI M******</b><span>0813******77</span></div><div class="prize">Rp2.000.000</div></div>
-        <div class="winner"><div class="no">6</div><div class="info"><b>AGUS R******</b><span>0856******32</span></div><div class="prize">Rp2.000.000</div></div>
-        <div class="winner"><div class="no">7</div><div class="info"><b>LISA N******</b><span>0895******88</span></div><div class="prize">Rp2.000.000</div></div>
-        <div class="winner"><div class="no">8</div><div class="info"><b>RIZKY A******</b><span>0822******19</span></div><div class="prize">Rp2.000.000</div></div>
-        <div class="winner"><div class="no">9</div><div class="info"><b>NOVI K******</b><span>0819******65</span></div><div class="prize">Rp2.000.000</div></div>
-        <div class="winner"><div class="no">10</div><div class="info"><b>FAJAR H******</b><span>0838******04</span></div><div class="prize">Rp2.000.000</div></div>
-
+        <div class="winner"><b>1</b><div><strong>ANDI S******</strong><small>0812******21</small></div></div>
+        <div class="winner"><b>2</b><div><strong>SITI A******</strong><small>0853******90</small></div></div>
+        <div class="winner"><b>3</b><div><strong>BUDI S******</strong><small>0821******44</small></div></div>
+        <div class="winner"><b>4</b><div><strong>RINA P******</strong><small>0878******12</small></div></div>
+        <div class="winner"><b>5</b><div><strong>DEWI M******</strong><small>0813******77</small></div></div>
+        <div class="winner"><b>6</b><div><strong>AGUS R******</strong><small>0856******32</small></div></div>
+        <div class="winner"><b>7</b><div><strong>LISA N******</strong><small>0895******88</small></div></div>
+        <div class="winner"><b>8</b><div><strong>RIZKY A******</strong><small>0822******19</small></div></div>
+        <div class="winner"><b>9</b><div><strong>NOVI K******</strong><small>0819******65</small></div></div>
+        <div class="winner"><b>10</b><div><strong>FAJAR H******</strong><small>0838******04</small></div></div>
     </div>
 
     <div class="website">
-        Website Resmi: <b>https://www.website-resmi.com</b>
+        <span>🌐 WEBSITE RESMI</span>
+        <strong>https://www.website-resmi.com</strong>
     </div>
 
     <div class="footer">
-        Pastikan proses klaim dilakukan melalui kanal resmi.
+        🎊 Selamat kepada seluruh pemenang terpilih 🎊
     </div>
 
 </div>
